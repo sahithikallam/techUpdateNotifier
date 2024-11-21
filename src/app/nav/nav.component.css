@@ -1,0 +1,120 @@
+/* Apply Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Adjust navbar logo size */
+.logo-image {
+  height: 40px; 
+}
+
+.logo-text {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-left: 10px; /* Spacing between logo and text */
+}
+
+/* Ensure logo and text align correctly to the left */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align to the left */
+}
+
+/* Adjust navbar link styles */
+.nav-link {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white !important;
+}
+
+.nav-link:hover {
+  color: #6d1cd8 !important;
+}
+
+/* Style buttons */
+.btn-group {
+  display: flex;
+  margin-right: -200px; /* Adjust as needed */
+}
+
+.btn-group .btn {
+  border-radius: 10px; 
+  border: 5px solid #2e2e2e;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.btn-group .btn-light {
+  background-color: #7d7e80;
+  color: #ffffff;
+}
+
+.btn-group .btn-light:hover {
+  background-color: #6205c5;
+  border-color: #3d027b;
+}
+
+.btn-group .btn-primary {
+  background-color: #7d7e80;
+  color: #ffffff;
+}
+
+.btn-group .btn-primary:hover {
+  background-color: #6205c5;
+  border-color: #3d027b;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .logo-image {
+    height: 30px; /* Smaller logo on medium screens */
+  }
+
+  .logo-text {
+    font-size: 1.5rem; /* Smaller text on medium screens */
+    margin-left: 5px;
+  }
+
+  .nav-link {
+    font-size: 1rem; /* Slightly smaller links */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    flex-direction: row; /* Keep logo and text in row on small screens */
+    text-align: left; /* Ensure left alignment */
+  }
+
+  .btn-group {
+    flex-direction: column; /* Stack buttons vertically */
+    margin-right: 0; /* Reset margin for better alignment */
+    margin-top: 10px; /* Space above the button group */
+  }
+
+  .btn-group .btn {
+    margin: 5px 0; /* Space between stacked buttons */
+    width: 100%; /* Full width for buttons */
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-text {
+    font-size: 1.25rem; /* Smaller text on small screens */
+    margin-left: 0; /* Remove margin on small screens */
+    margin-top: 5px; /* Add some space above text */
+  }
+
+  .nav-link {
+    font-size: 0.9rem; /* Smaller links for mobile */
+  }
+
+  .btn-group {
+    margin-top: 15px; /* Additional margin for button group */
+  }
+}

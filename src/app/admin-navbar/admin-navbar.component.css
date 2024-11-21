@@ -1,0 +1,26 @@
+/* Navbar styles */
+.navbar {
+    background-color: #f1f1f1;
+}
+
+.logo-image {
+    height: 40px; /* Adjust as necessary */
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.85rem;
+    font-weight: bold;
+}
+
+/* Icon styles */
+.icon {
+    margin-left: 15px; /* Spacing between icons */
+}
+
+.icon-image {
+    height: 40px; /* Adjust size of icons */
+    width: 40px;
+}
+
+

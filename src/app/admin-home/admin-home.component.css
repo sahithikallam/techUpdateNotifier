@@ -1,0 +1,76 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0; 
+    overflow-x: hidden; 
+    color: #000 ;
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    height: 150vh; 
+    width: 100vw; 
+    /* background-color: #b0bce2; */
+   
+}
+/* Main content area */
+.content {
+    display: flex; 
+    flex: 1; 
+}
+
+
+
+/* Main content area to the right of the sidebar */
+.main-content {
+    flex: 1; 
+    /* padding: 15px;  */
+    overflow-y: auto; 
+    font-size: 1rem;
+}
+
+.custom-blue {
+    background-color: #bdcddd; /* Bootstrap primary color */
+    color: white;
+  }
+  
+  .custom-green {
+    background-color: #bcdbc3; /* Bootstrap success color */
+    color: white;
+  }
+  
+  .custom-red {
+    background-color: #dfbfc3; /* Bootstrap danger color */
+    color: white;
+  }
+  
+
+
+/* Button styles */
+button {
+  padding: 10px; 
+  margin: 10px; 
+  font-size: 1rem; 
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Add hover effect to buttons */
+button:hover {
+  background-color: #0056b3; /* Change to a darker blue on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+/* Basic reset for margins and paddings */
+.card {
+  padding: 10px;
+  margin: 15px; /* Adjust spacing between cards */
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+
+

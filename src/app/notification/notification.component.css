@@ -1,0 +1,100 @@
+.notification-filter{
+  justify-content: end;
+}
+
+select {
+  font-size: 1.5em;
+  color: #333;
+  background-color: #f9f9f9;
+  border: 2px solid #ccdbec;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  align-self: end;
+  margin-bottom: 10px;
+  
+}
+ 
+select:hover {
+  border-color: #7eade0;
+}
+ 
+select:focus {
+  box-shadow: 0 0 5px rgba(212, 228, 245, 0.5);
+  border-color: #89a4c1;
+  /* border-radius: 2px; */
+}
+ 
+option {
+border-radius: 5px;
+  font-size: 1em;
+  padding: 10px;
+  background-color: #fdfbfb;
+  color: #333333;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification-container {
+  margin-top: 100px;
+  max-width: 800px; /* Set max width */
+  width: 100%; /* Ensure it fills available space */
+  
+}
+.notification-cards {
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+
+}
+
+.noti_info {
+  background-color: #faf8f8;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 0;
+  position: relative;
+  cursor: pointer;
+  /* max-width: 80%; */
+  transition: box-shadow 0.3s;
+  
+}
+.notification-card{
+  display: grid;
+  grid-template-columns: 90% 10%;
+  align-items: center;
+  /* justify-items: center; */
+}
+
+/* .notification-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+} */
+
+/* .delete-icon {
+  font-size: 1.5rem;  
+  color: #494848;     
+  cursor: pointer;
+}
+
+.delete-icon:hover{
+  color: #000000;  
+} */
+
+.no-notifications {
+  color: #292828;
+  font-size: 35px;
+  text-align: center;
+}
+
+.notification{
+margin-right: 200px;
+}
+
+#notification-filter{
+  width: 100px;
+}

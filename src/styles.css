@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* html,body{
+    background-color: black;
+    color: white;
+} */
+
+body{
+    -ms-overflow-style: none;
+    font-family: 'Times New Roman', Times, serif;
+ 
+}
+body::-webkit-scrollbar {
+    display: none; /* Chrome/Safari: Hide scrollbar */
+}

@@ -1,0 +1,32 @@
+
+<body>
+  <div class="container-fluid"  >
+    <div class="content container-fluid d-flex flex-wrap">
+        <div class="col-md-10 main-content" >
+        <div class="container blogs-container" > 
+    <h2> Latest Tech Blogs</h2> <br> <br>
+    <div class="row">
+      <div *ngFor="let blog of blogs; let i = index" class="col-md-6 mb-4">
+        <div class="blog-card">
+          <!-- Alternate between image and text display based on index -->
+          <div class="row no-gutters align-items-center">
+            <div class="col-6" [ngClass]="i % 2 === 0 ? 'order-md-1' : 'order-md-2'">
+              <img [src]="blog.image" class="img-fluid blog-image" alt="{{blog.title}}">
+            </div>
+            <div class="col-6" [ngClass]="i % 2 === 0 ? 'order-md-2' : 'order-md-1'">
+              <div class="blog-text">
+                <h3>{{ blog.title }}</h3>
+                <p>{{ blog.description }}</p>
+                <a [href]="blog.link" class="read-more" target="_blank">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+</body>

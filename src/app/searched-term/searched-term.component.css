@@ -1,0 +1,125 @@
+/* Position the back arrow button at the top left */
+.back-arrow-container {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  z-index: 10; /* Ensures it is above other content */
+}
+
+.back-arrow {
+  font-size: 18px; /* Size of the icon */
+  color: #007bff;  /* Color of the arrow */
+  text-decoration: none;
+}
+
+.back-arrow i {
+  margin-right: 5px;
+}
+
+/* General card styling */
+.card {
+    margin: 1rem auto;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 300px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Image styling */
+  .card-img-top {
+    width: 100px;
+    height: 100px;
+    margin-left: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Card body styling */
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+    line-height: 1.5;
+  }
+  
+  strong {
+    color: #333;
+  }
+  
+  /* Alert message styling */
+  .alert {
+    max-width: 400px;
+    top: 100px;
+    margin: 2rem auto;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  /* Responsive Design */
+  
+  /* Small devices (phones, less than 576px) */
+  @media (max-width: 575.98px) {
+    .card {
+      max-width: 90%;
+      margin: 1rem;
+    }
+  
+    .card-title {
+      font-size: 1.25rem;
+    }
+  
+    .card-text {
+      font-size: 0.9rem;
+    }
+  
+    .alert {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Medium devices (tablets, 576px and up) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .card {
+      max-width: 80%;
+    }
+  
+    .card-title {
+      font-size: 1.4rem;
+    }
+  
+    .card-text {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .card {
+      max-width: 600px;
+    }
+  
+    .card-title {
+      font-size: 1.5rem;
+    }
+  
+    .card-text {
+      font-size: 1.1rem;
+    }
+  }
+  

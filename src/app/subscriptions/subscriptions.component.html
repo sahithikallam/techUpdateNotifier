@@ -1,0 +1,69 @@
+<div class="container">
+  <h2>Your Subscriptions</h2>
+  <div *ngIf="isLoading" class="loading-indicator">Loading...</div>
+  <div class="row" *ngIf="!isLoading">
+    <div class="col-md-4 mb-4" *ngFor="let tech of subscriptions">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex flex-row justify-content-between">
+          <h5 class="card-title">{{ tech.tech_name }}</h5>
+          <div class="tech-img-box">
+            <img src='../../assets/uploads/{{tech.tech_pic}}' alt="{{ tech.tech_pic }}" class="tech-image">    
+          </div>
+          </div>
+          <p class="card-text"><strong>Version:</strong> {{ tech.version }}</p>
+          <button class="btn btn-danger"  data-bs-toggle="modal" data-bs-target="#unsubscribe"  (click)="setSelectedTech(tech)">Unsubscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="subscriptions.length === 0 && !isLoading">
+    <p>You have no subscriptions yet.</p>
+  </div>
+  <br>
+  <hr>
+  <br>
+
+ <!-- Available Technologies -->
+ <h2>Available Technologies</h2>
+ <div class="row" *ngIf="!isLoading">
+   <div class="col-md-4 mb-4" *ngFor="let tech of filteredTechnologies">
+     <div class="card">
+      <div class="card-body">
+      <div class="d-flex flex-row justify-content-between">
+        <h5 class="card-title">{{ tech.tech_name }}</h5>
+        <div class="tech-img-box">  
+          <img src='../../assets/uploads/{{tech.tech_pic}}' alt="{{ tech.tech_pic }}" class="tech-image">    
+        </div>
+        </div>
+         <p class="card-text"><strong>Version:</strong> {{ tech.version }}</p>
+         <button class="btn btn-primary" (click)="subscribeToTechnology(tech.tech_id)">Subscribe</button>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <div *ngIf="filteredTechnologies.length === 0 && !isLoading">
+   <p>No available technologies to subscribe to.</p>
+ </div>
+
+
+ <!-- Modal -->
+ <div class="modal fade" id="unsubscribe" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel1">Unsubscribe</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h4>Are you sure you want to remove {{ selectedTech?.tech_name }} from subscriptions?</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="unsubscribe(selectedTech?.tech_id)">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

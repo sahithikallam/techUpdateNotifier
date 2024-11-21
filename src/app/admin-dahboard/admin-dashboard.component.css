@@ -1,0 +1,25 @@
+.admin-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+  }
+ 
+.admin-main {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden; /* Prevents overflow of content */
+  }
+ 
+.admin-content {
+    flex-grow: 1; /* Takes up the remaining width */
+    /* padding: 20px; */
+    margin-top: 60px;
+    background-color: #fff; /* Background color for content area */
+    overflow-y: auto; /* Allows scrolling if content is too long */
+  }
+ 
+  app-admin-sidebar{
+    margin-top: 60px;
+    margin-left: -12px;
+  
+  }

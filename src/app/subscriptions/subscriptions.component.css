@@ -1,0 +1,59 @@
+
+.container {
+    margin-top: 80px; 
+  }
+  
+  .card {
+    border: 1px solid #ccc; 
+    height: 150px;
+    border-radius: 5px; /* Rounded corners */
+    margin: 15px; /* Margin for spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s; /* Smooth transform */
+}
+  .card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0px 8px 15px rgba(138, 193, 229, 0.4); 
+  }
+  
+  .card-body {
+    padding: 15px; /* Padding inside the card */
+  }
+  .tech-img-box {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .tech-image {
+    width: 100%; /* Make the image fill the width of the circle */
+    height: 100%; /* Make the image fill the height of the circle */
+    object-fit: cover; /* Ensure the image covers the entire circle */
+  }
+  
+  
+  .btn {
+    /* position: absolute; */
+  bottom: 10px;       /* Position from the bottom */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+  .loading-indicator {
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 0; /* Space above and below loading indicator */
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      margin-bottom: 20px; /* Space between cards on smaller screens */
+    }
+  
+    .back-button {
+      font-size: 16px; /* Adjust back button size on smaller screens */
+    }
+  }
+  

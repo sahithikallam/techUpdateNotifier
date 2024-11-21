@@ -1,0 +1,89 @@
+<app-nav></app-nav>
+
+<div class="signup-page">
+  <div class="signup-container">
+    <div class="icon-container">
+      <i class="fas fa-user-plus"></i>
+    </div>
+
+    <h2>Sign Up</h2>
+
+    <form (ngSubmit)="onSubmit()" class="form-container">
+      <!-- Username -->
+      <div class="form-group">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Username" [(ngModel)]="username" name="username" required  />
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <i class="fas fa-envelope"></i>
+        <input
+          type="email"  placeholder="Email"  [(ngModel)]="email" name="email" required/>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <input [type]="passwordType" placeholder="Password" [(ngModel)]="password" name="password" required/>
+        <i class="fas" [ngClass]="{'fa-eye': passwordType === 'password', 'fa-eye-slash': passwordType !== 'password'}" (click)="togglePassword()"></i>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="form-group">
+        <input  [type]="confirmPasswordType" placeholder="Confirm Password" [(ngModel)]="confirmPassword" name="confirmPassword" required/>
+        <i class="fas"  [ngClass]="{'fa-eye': confirmPasswordType === 'password', 'fa-eye-slash': confirmPasswordType !== 'password'}" (click)="toggleConfirmPassword()" ></i>
+      </div>
+
+      <!-- Terms -->
+      <div class="terms-group">
+        <input type="checkbox" [(ngModel)]="acceptedTerms" name="acceptedTerms" />
+        <label for="terms">
+          I accept the <a [routerLink]="['/terms']" class="terms-link">terms and conditions</a>
+        </label>
+      </div>
+      <br>
+
+      <!-- Submit Button -->
+      <button type="submit" [disabled]="isSubmitting || !formValid()">Submit</button>
+
+      <!-- Loading Spinner -->
+      <div *ngIf="isSubmitting" class="spinner">Loading...</div>
+
+      <!-- Success/Error Message -->
+      <div [ngClass]="{ 'success-message': isSuccess, 'error-message': !isSuccess }">
+        {{ message }}
+      </div>
+
+      <!-- Login Link -->
+      <div class="login-link">
+        <p>Already have an account? <a routerLink="/login">Login here!</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<!-- OTP Modal -->
+<div class="modal fade" id="otpModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="otpModalLabel" aria-hidden="true" [ngClass]="{ 'show': isOtpModalOpen, 'd-block': isOtpModalOpen }">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="otpModalLabel">Verify OTP</h5>
+        <button type="button" class="btn-close" (click)="closeOtpModal()"></button>
+      </div>
+      <div class="modal-body">
+        <p>An OTP has been sent to your registered email. Please enter it below to verify your account.</p>
+        <input type="text" [(ngModel)]="otp" placeholder="Enter OTP" class="form-control" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeOtpModal()">Close</button>
+        <button type="button" class="btn btn-primary" (click)="verifyOtp()">Verify OTP</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Background Overlay when Modal is Active -->
+<div *ngIf="isOtpModalOpen" class="overlay"></div>
+
+<app-footer></app-footer>

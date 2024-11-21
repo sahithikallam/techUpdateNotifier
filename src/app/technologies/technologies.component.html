@@ -1,0 +1,115 @@
+<!-- <div class="container">
+  <h2>Explore Technologies </h2> <br>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let tech of technologies">
+      <div class="card" >
+        <div class="card-body">
+          <h2 class="card-title">{{ tech.tech_name }}</h2>
+          <p class="card-text">{{ tech.tech_desc }}</p>
+          <p class="card-text1">Version : {{ tech.version }}</p>
+          <button 
+            class="btn" 
+            [ngClass]="{'btn-success': isSubscribed(tech.tech_id), 'btn-primary': !isSubscribed(tech.tech_id)}"
+            (click)="subscribe(tech.tech_id)">
+            {{ isSubscribed(tech.tech_id) ? 'Subscribed' : 'Subscribe' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- 
+<div class="container">
+  <h2>Explore Technologies </h2> <br>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let tech of technologies">
+      <div class="card">
+        <div class="tech-img-container">
+          <img src='../../assets/tech_pics/{{tech.tech_pic}}.png' alt="{{ tech.tech_pic }}" class="tech-image" height="50px" style="object-fit: contain;">  
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">{{ tech.tech_name }}</h2>
+          <p class="card-text">{{ tech.tech_desc }}</p>
+          <p class="card-text1">Version : {{ tech.version }}</p>
+          <button 
+            class="btn" 
+            [ngClass]="{'btn-success': isSubscribed(tech.tech_id), 'btn-primary': !isSubscribed(tech.tech_id)}"
+            (click)="subscribe(tech.tech_id)">
+            {{ isSubscribed(tech.tech_id) ? 'Info' : 'Subscribe' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="isModalOpen" class="modal-backdrop">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ selectedTech?.tech_name }}</h5>
+        <button type="button" class="close" (click)="closeInfoModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Description:</strong> {{ selectedTech?.tech_desc }}</p>
+        <p><strong>Version:</strong> {{ selectedTech?.version }}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeInfoModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+  <h2>Explore Technologies</h2> <br>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let tech of technologies">
+      <div class="card">
+         <div class="card-body">
+          <div class="d-flex flex-row justify-content-between">
+            <h2 class="card-title">{{ tech.tech_name }}</h2>
+            <div class="tech-img-box">
+              <!-- <img [src]="environment.apiUrl + '/uploads/' + tech.tech_pic" alt="{{ tech.tech_name }}" /> -->
+              <!-- <img [src]="environment.apiUrl + '/uploads/' + tech.tech_pic + '?v=' + tech.version" alt="{{ tech.tech_name }}" /> -->
+              <img src='../../assets/uploads/{{tech.tech_pic}}' alt="{{ tech.tech_pic }}" class="tech-image">    
+            </div>
+          </div>
+          <p class="card-text">{{ tech.tech_desc }}</p>
+          <p class="card-text1">Version: {{ tech.version }}</p>
+          <button 
+            class="btn" 
+            [ngClass]="{'btn-success': isSubscribed(tech.tech_id), 'btn-primary': !isSubscribed(tech.tech_id)}"
+            (click)="isSubscribed(tech.tech_id) ? openInfoModal(tech) : subscribe(tech.tech_id)">
+            {{ isSubscribed(tech.tech_id) ? 'Info' : 'Subscribe' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div *ngIf="isModalOpen" class="modal-backdrop">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ selectedTech?.tech_name }}</h5>
+        <!-- Close button that calls closeInfoModal() on click -->
+        <button type="button" class="close" (click)="closeInfoModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Version:</strong> {{ selectedTech?.version }}</p>
+        <p>{{ selectedTech?.info }}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeInfoModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+

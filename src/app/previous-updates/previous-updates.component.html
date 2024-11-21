@@ -1,0 +1,75 @@
+<!-- <div class="container">
+    <h2>All the previous updates are listed below:</h2>
+    <hr>
+    <div class="row" *ngIf="updates.length > 0">
+      <div class="col-md-6 mb-4" *ngFor="let update of updates" (click)="openModal(update)">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ update.tag_name }}</h5>
+            <p class="card-text"><strong>Published Date:</strong> {{ update.published_at | date:'medium' }}</p>
+            <p class="card-text">{{ update.description | slice:0:100 }}...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="updates.length === 0">
+      <p>No previous updates found for this technology.</p>
+    </div>
+  
+    <button *ngIf="hasMoreUpdates" class="btn btn-primary" (click)="loadMoreUpdates()">Load More</button>
+  </div>
+   -->
+  <!-- Modal -->
+  <!-- <div class="modal" tabindex="-1" role="dialog" [ngClass]="{'show': showModal}" [style.display]="showModal ? 'block' : 'none'" (click)="closeModal()">
+    <div class="modal-dialog" role="document" (click)="$event.stopPropagation()">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ selectedUpdate?.tag_name }}</h5>
+          <button type="button" class="close" (click)="closeModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p *ngIf="selectedUpdate"><strong>Published Date:</strong> {{ selectedUpdate.published_at | date:'medium' }}</p>
+          <p *ngIf="selectedUpdate"><strong>Description:</strong></p>
+          <div *ngIf="selectedUpdate" [innerHTML]="selectedUpdate.description"></div>
+          <p *ngIf="selectedUpdate"><strong>Tag Name:</strong> {{ selectedUpdate.tag_name }}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  
+  <div class="container">
+    <h2>All the previous updates are listed below:</h2>
+    <hr>
+  
+    <!-- Show loading state here -->
+    <div *ngIf="updates.length === 0">
+      <p>Loading...</p>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+  
+    <div *ngIf="!isLoading">
+      <div class="row" *ngIf="updates.length > 0">
+        <div class="col-md-6 mb-4" *ngFor="let update of updates" (click)="openModal(update)">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ update.tag_name }}</h5>
+              <p class="card-text"><strong>Published Date:</strong> {{ update.published_at | date:'medium' }}</p>
+              <p class="card-text">{{ update.description | slice:0:100 }}...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+     
+  
+      <button *ngIf="hasMoreUpdates" class="btn btn-primary" (click)="loadMoreUpdates()">Load More</button>
+    </div>
+  </div>
+  

@@ -1,0 +1,200 @@
+html, body {
+  height: 80%;
+  margin: 0;
+  padding: 0;
+}
+
+/* General Layout */
+.login-page {
+  background-image: url('logbgc.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Increase height to make the page larger */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center horizontally */
+  color: black;
+  overflow: hidden; /* Prevent scrollbars if unnecessary */
+}
+
+/* Login Container */
+.login-container {
+  background-color: rgba(228, 250, 252, 0.9);
+  padding: 20px;
+  width: 90%; /* Adjust width to be responsive */
+  max-width: 400px; /* Ensure it does not exceed max-width */
+  margin: 0 auto;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Icon Container */
+.icon-container {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+/* Form Group for Inputs */
+.form-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #333232;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.form-group i {
+  margin-right: 10px;
+  color: #777;
+}
+
+.form-group input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+}
+
+.form-group .fa-eye,
+.form-group .fa-eye-slash {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Links and Buttons */
+.forgot-password {
+  display: block;
+  color: blue;
+  font-size: 17px;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+  color: rgb(95, 7, 177);
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.signup-link p {
+  font-size: 17px;
+}
+
+.signup-link a {
+  color: blue;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+  color: rgb(95, 7, 177);
+}
+
+/* Google Sign-in */
+/* .google-signin {
+  display: flex;
+  background-color: rgb(228, 191, 147);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.google-signin:hover {
+  background-color: rgb(243, 153, 17);
+}
+
+.google-signin img {
+  width: 20px;
+  margin-right: 10px;
+} */
+
+/* Responsive Styles */
+
+/* Tablets and Small Desktops */
+@media only screen and (max-width: 1024px) {
+  .login-container {
+    max-width: 80%;
+  }
+
+  .icon-container {
+    font-size: 35px;
+  }
+
+  button {
+    padding: 8px;
+    font-size: 16px;
+  }
+
+  .form-group input {
+    font-size: 14px;
+  }
+
+  .forgot-password, .signup-link a {
+    font-size: 14px;
+  }
+
+  .signup-link p {
+    font-size: 13px;
+  }
+}
+
+/* Phones and Small Screens */
+@media only screen and (max-width: 600px) {
+  .login-container {
+    width: 95%; /* Almost full-width for small screens */
+    padding: 15px; /* Reduce padding */
+    min-height: 80vh; /* Increase the container height for better fit */
+  }
+
+  .icon-container {
+    font-size: 30px; /* Smaller icon size */
+  }
+
+  button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .form-group input {
+    font-size: 12px;
+  }
+
+  .forgot-password, .signup-link a {
+    font-size: 12px;
+  }
+
+  .signup-link p {
+    font-size: 12px;
+  }
+
+  /* .google-signin {
+    flex-direction: column; 
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .google-signin img {
+    margin: 0 0 5px 0; 
+  } */
+}

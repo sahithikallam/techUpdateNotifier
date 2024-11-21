@@ -1,0 +1,64 @@
+<!-- earlier-updates.component.html -->
+<div class="main-container">
+  <h2>Earlier Updates</h2>
+  <!-- Left Column (Cards) -->
+  <div class="container">
+    <div class="row" *ngIf="!isLoading">
+      <div class="col-md-12 mb-4" *ngFor="let tech of subscriptions">
+        <div class="card" [routerLink]="['/user/previous-updates', tech.tech_id]">
+          <div class="tech-img-container">
+            <img src='../../assets/uploads/{{tech.tech_pic}}' alt="{{ tech.tech_pic }}" class="tech-image">    
+          </div>
+        <div class="card-body">
+            <h5 class="card-title">{{ tech.tech_name }}</h5>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="subscriptions.length === 0 && !isLoading">
+      <p>You have no subscriptions yet.</p>
+    </div>
+
+     <!-- Right Column (GIF) -->
+     <div class="col-md-6 right-column">
+      <img src="assets/update.gif" class="d-block gif-image" alt="GIF Image">
+  </div>
+</div>
+  </div>
+
+
+  
+     
+
+
+
+  <!-- <div class="container">
+    <h2>Technologies You Are Subscribed To</h2>
+    <div *ngIf="subscribedTechnologies.length > 0">
+      <ul>
+        <li *ngFor="let tech of subscribedTechnologies" (click)="onTechClick(tech.tech_name)">
+          {{ tech.tech_name }}
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="subscribedTechnologies.length === 0">
+      <p>You are not subscribed to any technologies.</p>
+    </div>
+  </div> -->
+  
+  <!-- <div class="container">
+    <h2>Earlier Updates</h2>
+    <div *ngIf="isLoading" class="loading-indicator">Loading...</div>
+    <div class="row" *ngIf="!isLoading">
+      <div class="col-md-12 mb-4" *ngFor="let tech of subscriptions">
+        <div class="card" [routerLink]="['/previous-updates', tech.tech_id]">
+          <div class="card-body">
+            <h5 class="card-title">{{ tech.tech_name }}</h5><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="subscriptions.length === 0 && !isLoading">
+      <p>You have no subscriptions yet.</p>
+    </div> -->
+    

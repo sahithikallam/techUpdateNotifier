@@ -1,0 +1,98 @@
+<div class="container-fluid mt-5">
+  <div class="content container-fluid d-flex flex-wrap">
+    <div class="col-md-9 main-content">
+      <div class="content-body">
+        <div class="search-bar ">
+          <input type="text" id="search" class="form-control" placeholder="Search here..." [(ngModel)]="searchTerm" (keydown.enter)="searchTechnology(); $event.preventDefault()"/>
+        </div>   
+        <hr>          
+        <!-- GIF and Description Section -->
+        <div class="row gif-and-description mb-4">
+          <!-- GIF on the left -->
+          <div class="col-md-6">
+            <img
+              src="assets/carou.gif"
+              class="d-block w-100 gif-image"
+              alt="GIF Image"
+            />
+          </div>
+
+          <!-- Description about Tech Update Notifier on the right -->
+          <div class="col-md-6 description-content">
+            <h2>Stay Informed!</h2>
+            <h5>
+              The TechUpdate Notifier is a platform designed to keep users
+              informed about the latest advancements and features in their areas
+              of interest. Users receive tailored notifications for updates,
+              including new releases and important changes. Each notification
+              includes a brief description, timestamp, and an overview of any
+              new developments. Stay informed and enhance your knowledge
+              effortlessly with TechUpdate Notifier.
+            </h5>
+          </div>
+        </div>
+        <hr />
+        <div>
+         <!-- Technology Names -->
+          <h3>Trending Technologies:</h3>
+            <div class="technology-animation mb-4">
+              <!-- <marquee behavior="scroll" direction="left"> -->
+                <div class="tech-container">
+                  <div class="tech-circle" *ngFor="let tech of filteredTechnologies" title="{{ tech.tech_name }}" (click)="openTechModal(tech)">
+                    <img src='../../assets/uploads/{{tech.tech_pic}}' alt="{{ tech.tech_pic }}" class="tech-image">    
+                  </div>
+               </div>
+            <!-- </marquee>               -->
+          </div>
+      </div>
+      <hr>
+      <!-- Side-by-Side Divs -->
+      <div class="row mb-4">
+        <!-- Tech News Cards -->
+        <div class="col-md-6">
+            <div class="container tech-news">
+                <h4>Latest Tech News</h4>
+                <div *ngFor="let news of techNews">
+                    <div class="card mb-2">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ news.title }}</h5>
+                            <a routerLink="/news/{{ news.id }}" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- To-Do List -->
+        <div class="col-md-6">
+          <div class="container todo-list">
+              <h4>To-Do List</h4>
+              <textarea rows="10" placeholder="Write your tasks here..." [(ngModel)]="todoTasks"></textarea>
+              <button class="btn btn-success mt-2" (click)="saveTasks()">Save</button>
+          </div>
+      </div> 
+  </div>
+</div>
+</div>
+</div>
+                
+
+<!-- Modal -->
+<div class="modal fade" tabindex="-1" role="dialog" [ngClass]="{'show': showModal}" [style.display]="showModal ? 'block' : 'none'" (click)="closeModal()">
+    <div class="modal-dialog modal-dialog-centered" role="document" (click)="$event.stopPropagation()">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ selectedTech?.tech_name }}</h5>
+          <button type="button" class="btn-close" (click)="closeModal()" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Version:</strong> {{ selectedTech?.version }}</p>
+          <p><strong>Description:</strong> {{ selectedTech?.tech_desc }}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- <app-footer></app-footer> -->

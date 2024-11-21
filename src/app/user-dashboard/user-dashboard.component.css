@@ -1,0 +1,22 @@
+.user-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+  }
+ 
+.user-main {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden; /* Prevents overflow of content */
+  }
+ 
+.user-content {
+    flex-grow: 1; /* Takes up the remaining width */
+    padding: 20px;
+    background-color: #fff; /* Background color for content area */
+    overflow-y: auto; /* Allows scrolling if content is too long */
+  }
+ 
+  app-sidebar{
+    margin-top: 60px;
+  }

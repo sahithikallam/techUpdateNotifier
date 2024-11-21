@@ -1,0 +1,65 @@
+/* Container for the form */
+.add-technology-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    height: 90vh; 
+    /* background-image: url('/home/ytp/Desktop/Project_angular/TechNotifier/src/assets/admin.jpg');
+    background-size:cover; */
+    background-color: #ffffff;
+}
+
+
+/* Form styles */
+form {
+    background-color: rgba(245, 241, 241, 0.8); /* White background with transparency */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the form */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Shadow for a lifted effect */
+    max-width: 400px; /* Maximum width for the form */
+    width: 100%; /* Full width for smaller screens */
+}   
+form:hover{
+    background-color: #e2e2e2;
+}
+
+/* Input field styles */
+input[type="text"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the input */
+    margin: 10px 0; /* Margin for spacing */
+    border: 1px solid #050505; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Button styles */
+button {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* Text color */
+    border: none; 
+   
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 50px; /* Padding inside the button */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #074485; /* Darker blue on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Adjust the form padding and button size for smaller screens */
+    form {
+        padding: 15px;
+    }
+
+    button {
+        padding: 8px 15px; /* Smaller padding */
+        font-size: 14px; /* Smaller font size */
+    }
+}

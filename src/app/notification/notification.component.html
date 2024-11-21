@@ -1,0 +1,72 @@
+<div class="center-container">
+  <div class="notification-container">
+    <div class="d-flex justify-content-between mt-4 mb-4">
+      <h2>Your Notifications</h2>
+    
+    <!-- Filter Dropdown -->
+      <div class="notification">
+      <select id="notification-filter" (change)="filterNotifications($event)">
+        <option value="all">All </option>
+        <option value="dismissed">Dismissed Notifications</option>
+      </select>
+    </div>
+    </div>
+
+    <!-- No notifications found -->
+    <div *ngIf="filteredNotifications && filteredNotifications.length === 0" class="no-notifications">
+      No notifications found.
+    </div>
+    
+    <!-- Notification Cards -->
+    <div class="notification-cards" *ngIf="filteredNotifications && filteredNotifications.length > 0">
+      <div *ngFor="let notification of filteredNotifications" class="notification-card">
+        <div class="noti_info">
+          <h4>{{ notification.title }}</h4>
+          <p>{{ notification.message }}</p>
+          <small>{{ notification.created_at | date: 'short' }}</small>
+        </div>
+        
+        <!-- Dismiss Button (Font Awesome icon) -->
+        <button class="btn justify-item-center ms-4 " (click)="dismissNotification(notification.id)">
+          <i class="fa-solid fa-xmark fs-3"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="notification-container">
+  <a class="back-button" (click)="goBack()">&#9664; Back</a>
+  <h2>Your Notifications</h2>
+  <div *ngIf="notifications.length === 0" class="no-notifications">
+    No notifications found.
+  </div>
+  <div class="notification-cards" *ngIf="notifications.length > 0">
+    <div *ngFor="let notification of notifications" class="notification-card">
+      <h4 (click)="viewUpdate(notification)">{{ notification.update_type }}</h4>
+      <p>{{ notification.update_description }}</p>
+      <small>{{ notification.update_date | date: 'short' }}</small>
+      <i class="fas fa-trash delete-icon" (click)="deleteNotification(notification.noti_id)"></i>
+    </div>
+  </div>
+</div> -->

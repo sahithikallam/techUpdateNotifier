@@ -1,0 +1,80 @@
+<!-- <body>
+  <div class="add-technology-container">
+    <h3>Add New Technology</h3>
+    <br>
+    <form (ngSubmit)="addTechnology()">
+        <label for="techName">Technology Name</label>
+        <input type="text" id="techName" [(ngModel)]="techName" name="techName" required />
+
+        <label for="techVersion">Technology Version</label>
+        <input type="text" id="techVersion" [(ngModel)]="techVersion" name="techVersion" required />
+
+        <label for="techDesc">Technology Description</label>
+        <input type="text" id="techDesc" [(ngModel)]="techDescription" name="techDesc" required />
+        <button type="submit">Save</button> 
+    </form>
+</div>  
+</body> -->
+<!-- 
+<body>
+  <div class="add-technology-container">
+    <h3>Add New Technology</h3>
+    <br>
+    <form (ngSubmit)="addTechnology()">
+        <label for="techName">Technology Name</label>
+        <input type="text" id="techName" [(ngModel)]="techName" name="techName" required />
+
+        <label for="techVersion">Technology Version</label>
+        <input type="text" id="techVersion" [(ngModel)]="version" name="techVersion" required />
+
+        <label for="techDesc">Technology Description</label> 
+        <input type="text" id="techDesc" [(ngModel)]="techDescription" name="techDesc" required />
+
+        <label for="techReleases">Technology Releases</label>
+        <input type="text" id="techReleases" [(ngModel)]="techReleases" name="techReleases" />
+
+        <label for="techInfo">Technology Info</label> <br>
+        <textarea id="techInfo" [(ngModel)]="techInfo" name="techInfo"></textarea>
+
+        <label for="techPic">Technology Picture</label>
+        <div class="input-box">
+          <input type="file" (change)="onFileChange($event)" accept="image/*" required>
+          <div *ngIf="newBookForm.get('image')?.invalid && newBookForm.get('image')?.touched" class="error-message">
+            Image is required.
+          </div>
+        </div>
+
+        <button type="submit">Save</button>
+    </form>
+  </div>  
+</body> -->
+
+<body>
+  <div class="add-technology-container">
+    <h3>Add New Technology</h3>
+    <br>
+    <form (ngSubmit)="addTechnology()">
+        <label for="techName">Technology Name</label>
+        <input type="text" id="techName" [(ngModel)]="techName" name="techName" required />
+
+        <label for="techVersion">Technology Version</label>
+        <input type="text" id="techVersion" [(ngModel)]="version" name="techVersion" required />
+
+        <label for="techDesc">Technology Description</label> 
+        <input type="text" id="techDesc" [(ngModel)]="techDescription" name="techDesc" required />
+
+        <label for="techReleases">Technology Releases</label>
+        <input type="text" id="techReleases" [(ngModel)]="techReleases" name="techReleases" />
+
+        <label for="techInfo">Technology Info</label> <br>
+        <textarea id="techInfo" [(ngModel)]="techInfo" name="techInfo"></textarea>
+
+        <!-- <label for="techPic">Technology Picture</label> -->
+        <div class="input-box">
+          <input type="file" (change)="onFileChange($event)" accept="image/*" required>
+        </div>
+         <br> <hr> <br>
+        <button type="submit">Save</button>
+    </form>
+  </div>  
+</body>

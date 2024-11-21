@@ -1,0 +1,32 @@
+<div class="col-md-3 sidebar" >
+    <br>
+    <h2 routerLink="/user">{{ user?.user_name }}'s Dashboard</h2><br>
+    <hr><br>
+    <a routerLink="blogs">Blogs</a>
+    <a routerLink="technology">Technologies</a>
+    <a routerLink="subscription">Subscriptions</a>
+    <a routerLink="earlier-updates">Earlier Updates</a>
+    <a routerLink="home">Latest Tech News</a>
+    <a routerLink="/terms">Terms & Conditions</a>
+    <a data-bs-toggle="modal" data-bs-target="#logout">Logout</a>    
+</div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="logout" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Logout</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h4>Are you sure you want to logout?</h4> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" routerLink="/login">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+

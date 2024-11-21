@@ -1,0 +1,26 @@
+ 
+/* Basic reset for margins and paddings */
+.card {
+    padding: 10px;
+    margin: 15px; /* Adjust spacing between cards */
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    transition: box-shadow 0.3s ease; /* Smooth transition */
+  }
+/* Button styles */
+button {
+    padding: 10px; 
+    margin: 10px; 
+    font-size: 1rem; 
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+  
+  /* Add hover effect to buttons */
+  button:hover {
+    background-color: #d30707; /* Change to a darker blue on hover */
+    color: #fff; /* Change text color on hover */
+  }
+ 
+  

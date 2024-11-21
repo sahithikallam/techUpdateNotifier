@@ -1,0 +1,38 @@
+/* Navbar styles */
+.navbar {
+    background-color: #464850;
+}
+
+.logo-image {
+    height: 40px; /* Adjust as necessary */
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.85rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* Icon styles */
+.icon {
+    margin-left: 15px; /* Spacing between icons */
+    position: relative;
+}
+  
+  .notification-dot {
+    position: absolute;
+    top: -5px; /* Adjust as necessary */
+    right: -5px; /* Adjust as necessary */
+    width: 15px; /* Diameter of the dot */
+    height: 15px; /* Diameter of the dot */
+    background-color: rgb(238, 9, 9); /* Dot color */
+    border-radius: 50%; /* Make it circular */
+  }
+
+.icon-image {
+    height: 40px; /* Adjust size of icons */
+    width: 40px;
+}
+
+

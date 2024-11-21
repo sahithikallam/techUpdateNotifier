@@ -1,0 +1,38 @@
+    <div class="main-content"><br>
+      <h1 class="text-center">Hello, Welcome back {{ adminData.username }}!</h1> <br>
+      <p class="text-center">Get access to all users, technologies, notifications!</p>
+      <br><hr><br>
+      <h3 class="display text-center">Current details:</h3> 
+      <div class="row text-center mb-4">
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <div class="card custom-blue mb-3" routerLink="admin-users">
+              <div class="card-body">
+                <h5 class="card-title" >Total Users</h5>
+                <p class="card-text">{{ totalUsers }}</p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-md-4">
+            <div class="card custom-green mb-3" routerLink="admin-tech">
+              <div class="card-body">
+                <h5 class="card-title" >Total Technologies</h5>
+                <p class="card-text">{{ totalTechnologies }}</p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-md-4">
+            <div class="card custom-red mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Total Updates</h5>
+                <p class="card-text">0</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <hr>
+   

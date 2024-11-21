@@ -1,0 +1,31 @@
+/* Basic reset for margins and paddings */
+.center-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  display: flex;
+  padding: 10px; /* Inner spacing */
+  margin: 15px; /* Spacing between cards */
+  width: 500px; /* Set a specific width for the cards */
+ 
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+  transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Icon styles */
+.card i {
+  font-size: 1.2rem; /* Size of the delete icon */
+  color: #292728; /* Red color for the delete icon */
+}
+
+.card i:hover {
+  color: #614145; /* Darker red on hover */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+  

@@ -1,0 +1,39 @@
+<app-nav></app-nav>
+
+<div class="container-fluid custom-container vh-100 d-flex flex-column justify-content-center align-items-center text-center">
+
+  <div class="video-container position-relative mt-4">
+    <!-- Video Element -->
+    <video id="introVideo" class="video" muted>
+      <source src="../../assets/Never Miss a Tech Update Again!-VEED (online-video-cutter.com).mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+    <!-- Play Button -->
+    <div id="playButton"  class="play-icon position-absolute bottom-0 start-50 translate-middle-x"(click)="toggleVideo('play')">
+      ▶
+    </div>
+
+    <!-- Pause Button -->
+    <div  id="pauseButton"  class="pause-icon position-absolute bottom-0 start-50 translate-middle-x" (click)="toggleVideo('pause')" style="display: none;">
+      || 
+    </div>
+  </div>
+
+  <br><br>
+  
+  <h1 class="mb-3 title-text">Where developers surf together</h1>
+  <p class="lead mb-5 subtitle-text">
+    We know how hard it is to be a developer. It doesn't have to be. Personalized updates, notifications, news feed, and search, much better than what's out there. Maybe ;)
+  </p>
+  
+  <a routerLink="login" (click)="redirectToLogin()" class="btn btn-primary btn-lg mb-5 get-started-btn">Get Started</a>
+  <br>
+
+  <p>
+    The TechUpdate Notifier is a comprehensive platform designed to keep users informed about the latest updates and new features in the technologies they are interested in. Users can subscribe to specific technologies, platforms, and programming languages (e.g., AWS, Java, Python) and receive notifications whenever there are relevant updates or new features.
+  </p>
+
+</div>
+
+<app-footer></app-footer>
